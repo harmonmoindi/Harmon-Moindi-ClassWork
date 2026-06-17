@@ -8,7 +8,7 @@
 				 let name = "Harmon"*
 	
 You can write your variable in different styles:
-										 - CamelCase : HoneyBee
+										 - CamelCase : honeyBee
 										 - Snake_case : how_to_cook
 										 - PascalCase : HowToCookRice
 
