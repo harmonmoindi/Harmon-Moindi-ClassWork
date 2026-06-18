@@ -2,8 +2,9 @@
 Console.log - debugging and printing out information on the screen. Ensure 
 you write in a way that helps you figure out the issue.
 */
-const monthlySalary = 80000;
-console.log("Gross salary is", monthlySalary)
+const bonus = "2500"
+const monthlySalary = bonus + 80000;
+console.log("Gross salary is", monthlySalary, "its type", typeof monthlySalary)
 const paye = monthlySalary * 0.15
 console.log("For the gross salary of", monthlySalary, "the PAYE is", paye)
 const nhif = 2000
