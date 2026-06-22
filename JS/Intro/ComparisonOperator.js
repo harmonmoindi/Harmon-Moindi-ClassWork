@@ -25,3 +25,37 @@ console.log(`Number 1 = ${value1} !== Number 2 = ${value2}
 let nonstrictInequality = value1 != value2
 console.log(`Number 1 = ${value1} != Number 2 = ${value2} 
     Answer = ${nonstrictInequality} its type is ${typeof nonstrictInequality}`)
+
+    /*
+    greater than a>b
+    less than a<b
+    greater than or equals to >=
+    less than or equal to <=
+    */
+
+    let number1 = 300
+    let number2 = 400
+
+    let str1 = "50"
+    let str2 = "90"
+
+    console.log(`number1 > number2 ${number1 > number2}`)
+    console.log(`str1 > str2 ${str1 > str2}`)
+
+    console.log(`number1 < number2 ${number1 < number2}`)
+    console.log(`str1 < str2 ${str1 < str2}`)
+
+    console.log(`number1 >= number2 ${number1 >= number2}`)
+    console.log(`str1 >= str2 ${str1 >= str2}`)
+
+    console.log(`number1 <= number2 ${number1 <= number2}`)
+    console.log(`str1 <= str2 ${str1 <= str2}`)
+
+    let Str1 = 'A' // 65
+    let Str2 = 'b' // 98
+     console.log(`Str1 > Str2 ${Str1 > Str2}`)
+     console.log(`Str1 < Str2 ${Str1 < Str2}`)
+     console.log(`${Str1} = ${Str1.charCodeAt(0)}`)
+      console.log(`${Str2} = ${Str2.charCodeAt(0)}`)
+
+      console.log(`Str1 >= Str2 ${Str1 >= Str2}`)
