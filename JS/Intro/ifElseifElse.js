@@ -4,7 +4,9 @@ if =>
 */
 let age = prompt ("Enter your age:");
     alert (`You entered ${age}`)
-if (age > 10){
+
+if (isNaN(age) === false){
+    if (age > 10){
     alert ("You are still growing")
 }
 if (age > 18){
@@ -20,4 +22,9 @@ if (age > 60) {
 if (age > 80) {
     alert ("You are an ancestor")
 }
-
+} else {
+    alert("Ensure you enter a number for age")
+}
+while (isNaN(age)) {
+    age = prompt("Try again:")
+}
