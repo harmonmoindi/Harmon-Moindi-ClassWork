@@ -44,3 +44,20 @@ if (grossSalary > 800000) {
 }
 alert(`This is your monthly PAYE; ${PAYE}, it is type ${typeof PAYE}`);
 alert(`Your tier is ${tier}`);
+
+// Calculating NSSF
+
+let NSSF = null;
+let employerNSSF = null;
+if (grossSalary > 9000 && grossSalary < 108000) {
+  NSSF = 9000 * 0.06 + (grossSalary - 9000) * 0.06; // 2nd tier
+  employerNSSF = NSSF;
+  if (grossSalary >= 108000) {
+    NSSF = 6480; // 3rd tier
+    employerNSSF = NSSF;
+  }
+} else {
+  NSSF = grossSalary * 0.06; //will execute when you're not in any of the other tiers. 1st tier
+  employerNSSF = NSSF;
+}
+console.log(`NSSF = ${NSSF + employerNSSF}`);
