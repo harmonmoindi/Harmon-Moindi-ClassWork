@@ -32,3 +32,27 @@ let rA = function (l, w) {
   return l * w;
 };
 console.log(rA(l, w));
+
+/*
+Arrow function
+1. create a function of your choice
+2. assign the function to a variable
+ */
+let rA2 = (l, w) => {
+  return l * w;
+};
+console.log(rA2(l, w));
+
+let a = 5;
+let b = 10;
+
+// Implicit return
+const multiply = (a, b) => a * b;
+
+// Block body
+const calculate = (a, b) => {
+  const result = a * b;
+  return result;
+};
+console.log(multiply(a, b));
+console.log(calculate(a, b));
