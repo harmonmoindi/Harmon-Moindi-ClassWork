@@ -48,5 +48,13 @@ function factorial(n) {
   }
   return n * factorial(n - 1);
 }
-const n = 5;
+const n = 6;
 console.log(factorial(n));
+console.log(factorial(7));
+console.log(factorial(4));
+
+/*
+Call Stack. 
+Last In - First Out. => Code is stacked systematically, so that the first one is down and the last to come out. 
+
+*/
