@@ -88,3 +88,67 @@ const car = {
   },
 };
 car.alert_output();
+
+/*confirm that you are able it print the object and it's type.*/
+
+console.log(`Car datatype is: ${car}`);
+console.log(car);
+console.log("Using console.table;");
+console.table(car); //table
+
+/*
+Accessing individual parts in your object
+2 ways;
+  1. dot notation. -> doesn't work for everything
+        - does not wor with properties which are
+                1 numbers
+                2 strings with spaces, numbers and special characters
+                - can only access properties that follow variable naming rules. 
+
+  
+  2. bracket notation. -> works for everything //you can access properties using variables.
+
+For each property access it using both dot and bracket notation.
+
+Hint for nested properties use example. car.manufacture.name or car["manufacturer"]["name"]
+*/
+// Dot notation
+console.log(`Name is ${car.name}, its type is ${typeof car.name}`);
+
+//Bracket notation
+console.log(`Name is ${car["name"]}, its type is ${typeof car["name"]}`);
+
+//car model
+console.log(`Model is ${car.model} its type is ${typeof car.model}`);
+
+// using bracket notation
+console.log(`Model is ${car["model"]} its type is ${typeof car["model"]}`);
+
+//"top speed"
+console.log(
+  `Top speed is ${car["top speed"]} its type is ${typeof car["top speed"]}`,
+);
+
+//nested manufacturer
+console.log(
+  `Country made is ${car.manufacture.country}, its type is ${typeof car.manufacture.country}`,
+);
+
+//bracket notation
+console.log(
+  `Country made is ${car["manufacture"]["country"]}, its type is ${typeof car["manufacture"]["country"]}`,
+);
+
+//nested number
+console.log(
+  `Country made is ${car["manufacture"][2]}, its type is ${typeof car["manufacture"][2]}`,
+);
+
+//The whole thing
+console.log(
+  `This is the alert function ${car.alert_output}, its type is ${typeof car.alert_output}`,
+);
+
+const engineInformation = car.engineInfo;
+console.log("Engine information");
+console.log(engineInformation);
