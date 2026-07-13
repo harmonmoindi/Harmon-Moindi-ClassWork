@@ -152,3 +152,10 @@ console.log(
 const engineInformation = car.engineInfo;
 console.log("Engine information");
 console.log(engineInformation);
+
+/*
+Update object data. 
+before you can update the data you must access it. 
+*/
+car.model = 2023;
+console.log(car.model);
