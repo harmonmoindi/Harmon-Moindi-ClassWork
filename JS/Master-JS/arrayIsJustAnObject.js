@@ -16,6 +16,11 @@ const myArray = [60, 90];
 const myObject = {
   0: 60,
   1: 90,
+  push: function (newItem) {
+    const key = this.length;
+    this[key] = newItem;
+    this.length = this.length + 1;
+  },
   length: 2,
 };
 
