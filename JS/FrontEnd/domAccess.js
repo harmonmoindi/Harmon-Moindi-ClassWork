@@ -38,7 +38,7 @@ Update DOM elements
     2. updating content 
     3. update the innerText
 */
-const otherFruits = ["Kiwi", "Pinapple", "Dragon Fruit"];
+const otherFruits = ["Kiwi", "Pineapple", "Dragon Fruit"];
 const originalDiv = document.querySelector("#div1").innerHTML;
 
 function original() {
@@ -59,10 +59,13 @@ function replace() {
   document.querySelector("#div1").innerHTML = newHtml;
 }
 function updateFruits() {
-  for (let i = 0; i < queryListOfAllItems.length; i++) {
-    queryListOfAllItems = otherFruits;
-    return queryListOfAllItems;
-    console.log(queryListOfAllItems);
+  const fruitList = document.querySelector(".fruitlist");
+  fruitList.innerHTML = "";
+
+  for (let i = 0; i < otherFruits.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = otherFruits[i];
+    fruitList.appendChild(li);
   }
-  console.log("update fruits clicked");
+  console.log("Update fruits clicked");
 }
