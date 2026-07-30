@@ -20,5 +20,15 @@ Vite:
     - to stop the vite application from running use - ctrl+c
     - to start the vite application use - npm run dev
 
+React Component:
+    This is just a react function. It has logic, styling and html. 
+    It's a reusable bit of ui <function>.
 
+    Rules:
+    - A component is a function.
+    - A component must start with capital letters. 
+    - A component must return a valid jsx or null.
+    - If it returns valid jsx, it can only return a react fragment or a single html element. 
+
+React Fragment - This is an empty tag that is used to store multiple html elements. 
  */

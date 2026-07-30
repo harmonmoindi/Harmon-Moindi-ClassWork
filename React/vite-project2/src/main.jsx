@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-createRoot(document.getElementById('root')).render(
+/*
+path "./"
+import (AnyName: Default Export) from "path"
+import js or jsx files. The extension is optional. 
+*/
+import AmazonPage from "./AmazonPage";
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <AmazonPage />
   </StrictMode>,
-)
+);
