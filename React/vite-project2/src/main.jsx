@@ -6,11 +6,11 @@ path "./"
 import (AnyName: Default Export) from "path"
 import js or jsx files. The extension is optional. 
 */
-import AmazonPage from "./AmazonPage";
-import "./index.css";
+import Props from "./Props";
+// import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AmazonPage />
+    <Props />
   </StrictMode>,
 );
