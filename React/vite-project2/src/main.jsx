@@ -6,11 +6,11 @@ path "./"
 import (AnyName: Default Export) from "path"
 import js or jsx files. The extension is optional. 
 */
-import Props from "./Props";
+import Mapping from "./Mapping";
 // import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Props />
+    <Mapping />
   </StrictMode>,
 );
