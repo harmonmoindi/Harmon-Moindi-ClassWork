@@ -6,11 +6,11 @@ path "./"
 import (AnyName: Default Export) from "path"
 import js or jsx files. The extension is optional. 
 */
-import Mapping from "./Mapping";
+import StateandEvents from "./StateandEvents/Form"; // Default Export
 // import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Mapping />
+    <StateandEvents />
   </StrictMode>,
 );
