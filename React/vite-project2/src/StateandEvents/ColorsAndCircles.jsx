@@ -50,6 +50,7 @@ function ColorList(props) {
     const clonedColors = [...colors];
     clonedColors.splice(index, 1);
     setColors(clonedColors);
+    console.log("Removed color at index:", index);
   };
 
   return (
