@@ -6,11 +6,11 @@ path "./"
 import (AnyName: Default Export) from "path"
 import js or jsx files. The extension is optional. 
 */
-import SideEffectsConditions from "./SideEffectsConditions/StopWatch"; // Default Export
+import GitHubProjects from "./GitHubProjects/index"; // Default Export
 // import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <SideEffectsConditions />
+    <GitHubProjects />
   </StrictMode>,
 );
