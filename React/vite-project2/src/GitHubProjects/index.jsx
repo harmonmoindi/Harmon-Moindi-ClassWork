@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import TopNav from "./TopNav";
+import InfoSection from "./InfoSection";
+import UserCard from "./UserCard";
 
 function GitHubProjects() {
   const [people, setPeople] = useState([]);
@@ -10,6 +13,10 @@ function GitHubProjects() {
       let response = await axios({
         method: "GET",
         url: "https://api.github.com/users",
+        headers: {
+          Authorization: `Bearer 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`,
+          Accept: "application/vnd.github+json",
+        },
       });
       setPeople(response.data);
     } catch (error) {
@@ -26,6 +33,14 @@ function GitHubProjects() {
   return (
     <div>
       <h1>GitHub Projects</h1>
+      <TopNav setPeople={setPeople} />
+      <div
+        style={{ backgroundColor: "black", width: "100%", height: "1px" }}
+      ></div>
+      <InfoSection people={people} />
+      {people.map((person) => (
+        <UserCard key={person.id} person={person} />
+      ))}
     </div>
   );
 }
