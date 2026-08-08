@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import RepositoryList from "./RepositoryList";
 
 function UserCard(props) {
   const { person } = props;
   const [followers, setFollowers] = useState([]);
+  const [isVisible, setIsVisible] = useState(false);
   const { login, repos_url, followers_url, avatar_url, html_url } = person;
 
   const getFollowers = async () => {
@@ -12,7 +14,7 @@ function UserCard(props) {
         method: "GET",
         url: followers_url,
         headers: {
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
           Accept: "application/vnd.github+json",
         },
       });
@@ -23,6 +25,8 @@ function UserCard(props) {
   useEffect(() => {
     getFollowers();
   }, []);
+
+  const toGithubProfile = () => window.open(html_url, "_blank");
 
   return (
     <div
@@ -48,9 +52,14 @@ function UserCard(props) {
           <b style={{ fontSize: "20px" }}>{login}</b>
         </div>
         <div>Followers: {followers.length}</div>
-        <button>Github profile</button>
-        <button>View Repositories</button>
+        <button onClick={toGithubProfile}>Github profile</button>
+        <button onClick={() => setIsVisible(true)}>View Repositories</button>
       </div>
+      <RepositoryList
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}
+        repos_url={repos_url}
+      />
     </div>
   );
 }

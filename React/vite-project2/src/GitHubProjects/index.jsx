@@ -14,7 +14,7 @@ function GitHubProjects() {
         method: "GET",
         url: "https://api.github.com/users",
         headers: {
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer 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`,
           Accept: "application/vnd.github+json",
         },
       });
