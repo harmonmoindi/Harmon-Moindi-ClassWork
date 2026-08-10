@@ -9,6 +9,9 @@ function RepositoryList(props) {
     let response = await axios({
       method: "GET",
       url: repos_url,
+      headers: {
+        // Accept: "application/vnd.github+json",
+      },
     });
 
     console.log(response);

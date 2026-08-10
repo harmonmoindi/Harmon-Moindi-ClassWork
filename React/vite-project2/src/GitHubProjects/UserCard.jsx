@@ -13,6 +13,9 @@ function UserCard(props) {
       let response = await axios({
         method: "GET",
         url: followers_url,
+        headers: {
+          // Accept: "application/vnd.github+json",
+        },
       });
       setFollowers(response.data);
     } catch (e) {}
