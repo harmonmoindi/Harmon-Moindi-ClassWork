@@ -13,10 +13,6 @@ function UserCard(props) {
       let response = await axios({
         method: "GET",
         url: followers_url,
-        headers: {
-          Authorization: `Bearer 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`,
-          Accept: "application/vnd.github+json",
-        },
       });
       setFollowers(response.data);
     } catch (e) {}

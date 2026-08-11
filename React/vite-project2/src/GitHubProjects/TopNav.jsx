@@ -14,10 +14,6 @@ function TopNav(props) {
       let response = await axios({
         method: "GET",
         url: "https://api.github.com/search/users",
-        headers: {
-          Authorization: `Bearer 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`,
-          Accept: "application/vnd.github+json",
-        },
         params: {
           q: trimmedString,
         },
