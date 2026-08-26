@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Navigation1 from "./Navigation1";
 import Navigation2 from "./Navigation2";
 import { useState, useEffect } from "react";
@@ -27,6 +28,12 @@ function CrazyRoute() {
       <Navigation1 />
       <Navigation2 />
       <h1>You must be crazy to be here. {countDown}</h1>
+=======
+function CrazyRoute() {
+  return (
+    <div>
+      <h1>You must be crazy to be here</h1>
+>>>>>>> e326ae8 (Routing was learnt today)
     </div>
   );
 }
