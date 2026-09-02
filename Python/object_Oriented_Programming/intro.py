@@ -39,6 +39,11 @@ class House:
     location = ""
     architect = "Moindi"
 
+    def __init__(self, owner, location):
+        print("Class House created. Initialier called.")
+        self.owner = owner
+        self.location = location
+
     def config(self, owner, location):
         self.owner = owner
         self.location = location
@@ -48,10 +53,10 @@ class House:
         print(self)
         print(self.__dict__)
 
-Lucy_house = House()
+Lucy_house = House(owner="Lucy", location="Nairobi")
 #Lucy_house.owner = "Lucy"
 #Lucy_house.location = "Nairobi"
-Lucy_house.config(owner="Lucy", location="Nairobi")
+#Lucy_house.config(owner="Lucy", location="Nairobi")
 print (f"Lucy's House Owner is {Lucy_house.owner}")
 print (f"Lucy's location is {Lucy_house.location}")
 print (f"Lucy's House Architect is {Lucy_house.architect}")
@@ -62,8 +67,8 @@ print (f"Lucy's House area is {Lucy_house.area}")
 Lucy_house.print_self()
 print ("-----------------------------------")
 
-Harmon_house = House()
-Harmon_house.config(owner="Harmon", location="Mombasa")
+Harmon_house = House(owner="Harmon", location="Mombasa")
+#Harmon_house.config(owner="Harmon", location="Mombasa")
 print (f"Harmon's House Owner is {Harmon_house.owner}") 
 print (f"Harmon's House Location is {Harmon_house.location}") 
 print (f"Harmon's House Architect is {Harmon_house.architect}")
