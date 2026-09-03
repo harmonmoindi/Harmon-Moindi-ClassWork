@@ -19,11 +19,23 @@ class BankAccount:
         self.name = name
         self.balance = balance
         self.account_no = account_no
-        
 
-    #latter change gee
-    def get_balance(self):
-        pass
+    #data i read
+    @property
+    def balance(self):
+        print ("Somebody tried top read your balance")
+        return self._balance
+
+    #to control, updated.
+    @balance.setter
+    def balance(self, value):
+        if not isinstance(value, (int, float)):
+            print ("Ensure you pass a number for new balance")
+            return
+        if value < 0:
+            print ("Balance must be greater than zero")
+            return
+        self._balance = value
 
     #setter
     def deposit(self, amount):
@@ -38,4 +50,6 @@ class BankAccount:
         print(f"Account Number: {self.account_no}")
 
 harmon = BankAccount(name="Harmon Moindi", balance=80000, account_no=123456)
+harmon.show_account_details()
+harmon.balance = 95000
 harmon.show_account_details()
