@@ -17,6 +17,13 @@ class Shape:
         print (f"Perimeter: {self.perimeter()}")
         print ("--------------------------------------")
 
+    #method area
+    def area (self):
+        print(f"For shape {self.shape_name}, area calculations missing")
+
+    def perimeter (self):
+        print(f"For shape {self.shape_name}, perimeter calculations missing")
+
 #inheritance class Name (<class inherited from>)
 
 class Rectangle (Shape):
@@ -36,6 +43,10 @@ class Rectangle (Shape):
     def perimeter(self):
         return 2 * (self.length + self.width)
 
+class triangle (Shape):
+    def __init__(self, base, height):
+        super().__init__(shape_name = "Triangle")
+
 #square class inherits from shape class
 class Square (Shape):
     def __init__(self, side):
@@ -51,10 +62,6 @@ class Square (Shape):
 
 s1 = Square (side = 50)
 
-print ("Shape name:", s1.shape_name)
-print ("Area:", s1.area())
-print ("Perimeter:", s1.perimeter())
-
 s1.describe()
 s1.display_info()
 
@@ -69,3 +76,7 @@ print ("Perimeter:", r1.perimeter())
 r1.describe()
 r1.display_info()
 """
+
+t1 = triangle (40, 60)
+t1.area()
+t1.perimeter()
