@@ -1,0 +1,80 @@
+# ==============================================================================
+# FastAPI / Python Essentials
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Virtual Environments (Always ignore these to keep your repo light)
+# ==============================================================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL: Never commit your secrets)
+# ==============================================================================
+.env
+.env.*
+!.env.example
+secrets.toml
+
+# ==============================================================================
+# Database & Local Testing Storage
+# ==============================================================================
+*.db
+*.sqlite3
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ==============================================================================
+# IDEs / Editors & OS Specific Files
+# ==============================================================================
+# JetBrains / PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# AI Editors (Cursor)
+.cursorignore
+.cursorindexingignore
+
+# OS files
+.DS_Store
+Thumbs.db
