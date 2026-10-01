@@ -32,3 +32,15 @@ def get_cursor(self):
     finally:
         cursor.close()
         conn.close()
+
+# test the database connection individually
+if __name__ == "__main__":
+    print ("Testing database connection...")
+    try:
+        db = Database()
+        with db.get_cursor() as cursor:
+            cursor.execute("SELECT  NOW() as current_time, version();")
+            result = cursor.fetchone()
+            print(f"Database connection successful: Current time: {result['current_time']}, version: {result['version']}")
+    except Exception as e:
+        print(f"Database connection failed: {e}")
