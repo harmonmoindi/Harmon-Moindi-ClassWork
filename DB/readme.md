@@ -37,3 +37,11 @@ Examples Of Non Relational DBS
 3.Couch DB server <Pouch DB>
 4.pocket Base
 5.Redis <cache>
+
+SQL
+Structured Query Language
+Syntax - It's not case sensitive. - sql keywords <Reserved for the language> - Each sql statement should terminate with a colon except the last one. - Atomic <file> - Either all execute or all fail.
+
+SQL Constraints
+
+CRUD - Create Read Update Delete
