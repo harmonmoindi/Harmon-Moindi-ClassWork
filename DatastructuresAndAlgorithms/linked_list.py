@@ -60,6 +60,19 @@ class LinkedList:
                 print("Found the last node")
                 return
             current = current.next
+            """
+    def insert(self, value):
+        newNode = Node(value)
+        if not self.start:
+            self.start = newNode
+            currentStart = self.start
+            """
+
+            return newNode
+        last_node = self.last #getting last node
+        last_node.next = newNode #next none
+        self.last = newNode
+        return newNode
 
 
 my_list = LinkedList()
